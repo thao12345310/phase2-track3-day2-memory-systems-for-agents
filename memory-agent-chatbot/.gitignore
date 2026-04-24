@@ -1,0 +1,41 @@
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# ── Virtual environment ─────────────────────────────────
+.venv/
+venv/
+ENV/
+
+# ── Environment / secrets ───────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Data & memory persistence (sensitive / generated) ───
+data/user_profiles.json
+data/episodes.json
+data/chroma_db/
+data/benchmark_results.json
+
+# ── IDE / Editor ─────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ── Misc ─────────────────────────────────────────────────
+*.log
+.cache/
+.pytest_cache/
+htmlcov/
+.coverage
