@@ -35,6 +35,11 @@ class SemanticMemory:
 
     def _init_chroma(self) -> None:
         """Try to initialize ChromaDB; fall back to keyword search."""
+        # Allow forcing keyword fallback (avoids slow ONNX model download)
+        if os.environ.get("USE_KEYWORD_FALLBACK", "").strip() == "1":
+            print("[SemanticMemory] Using keyword fallback (USE_KEYWORD_FALLBACK=1).")
+            return
+
         try:
             import chromadb
             from chromadb.config import Settings
